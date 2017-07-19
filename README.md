@@ -1,4 +1,4 @@
-A series of `bash` scripts for use with `[madonctl][1]`, the best solution for command line usage of Mastodon available, in my honest opinion.
+A series of `bash` scripts for use with [`madonctl`][1], the best solution for command line usage of Mastodon available, in my honest opinion.
 
 Don't expect heavily polished stuff here. I generally make things as I go. `madonctl` is meant to be easily scriptable, which lends itself well to quick solutions.
 
