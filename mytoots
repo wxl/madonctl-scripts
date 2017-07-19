@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+madonctl accounts notifications --list --notification-types mentions | less -r

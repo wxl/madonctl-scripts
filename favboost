@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+status=$1
+
+madonctl status --status-id=$status favourite
+madonctl status --status-id=$status boost

@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+if [ -z "$(madonctl accounts follow-requests --list)" ]; then
+   echo "no requests"
+   exit 0
+fi
+
+request="$(madonctl accounts follow-requests --list -l1 --color off)"
+id="$(echo "${request}" | grep "Account ID" | awk '{print $4}')"
+user="$(echo "${request}" | grep "UID" | awk '{print $2}')"
+
+madonctl accounts follow-requests --account-id $id --list
+
+function followback {
+   read -p "follow back? " followback
+
+   case $followback in
+      [yY]*)
+         madonctl accounts follow --user-id "$user" follow
+         ;;
+      [nN]*)
+         ;;
+      *)
+         echo "bad input"
+         followback
+         ;;
+   esac
+}
+
+function response {
+   read -p "accept or deny? " response
+
+   case $response in
+      [aA]*)
+         madonctl accounts follow-requests --account-id $id --accept
+         followback
+         ;;
+      [dD]*)
+         madonctl accounts follow-requests --account-id $id --reject
+         ;;
+      *)
+         echo "bad input, try again"
+         response
+         ;;
+   esac
+}
+
+response
+
+follows
