@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if [[ -z $1 ]]; then
+   echo "Usage: $(basename $0) account-id|user-id"
+   exit 1
+fi
+
+regex='^[0-9]+$'
+
+if [[ $1 =~ $regex ]]; then
+   madonctl accounts --account-id $1 follow
+else
+   madonctl accounts --user-id $1 follow
+fi
