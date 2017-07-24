@@ -33,7 +33,7 @@ Further questions and comments may be addressed to [@wxl@soc.ialis.me][3]
 Shout outs
 ==========
 
-A special thank you to [@redwolf@masto.io][5] for the lovely example toot to show off my notifications template. It does seem to suggest that he (and/or me) is a perv, but in fact, it was a lovely picture of [mating iguanas][6]. Of course, he still *might* be a perv, but
+A special thank you to [@redwolf@masto.io][5] for the lovely example toot to show off my notifications template. It does seem to suggest that he (and/or me) is a perv, but in fact, it was a lovely picture of [mating iguanas][6]. Of course, he still *might* be a perv, but…
 
 [1]: https://github.com/McKael/madonctl
 [2]: https://github.com/tmux/tmux
