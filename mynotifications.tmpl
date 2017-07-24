@@ -1,0 +1,4 @@
+
+{{"\a"}}
+{{- with .status}}{{color "red"}}{{printf "%.0f" .id}} {{color "reset"}}{{if gt .in_reply_to_id 0.0}}« {{printf "%.0f" .in_reply_to_id}} {{end}}{{if eq .visibility "direct"}}PRIVATE {{end}}{{if .sensitive}}NSFW {{end}}{{color "magenta"}}@{{.account.acct}}{{color "reset"}}{{end}} {{with .account}}({{printf "%.0f" .id}}){{end}} {{with .status}}{{if .text_url}}{{.text_url}} {{else if .url}}{{.url}} {{else if .remote_url}}{{.remote_url}}{{end}}{{end}}
+ {{with .status}}{{with .spoiler_text}}{{.}} {{end}}{{color "green"}}{{.content | fromhtml | wrap " " 79 | trim}}{{color "reset"}}{{end}}
