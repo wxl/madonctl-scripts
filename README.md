@@ -16,7 +16,8 @@ Also, I'm working on a set of templates tweaked to my liking. I usually `madonct
 
  * mynotifications.tmpl to use with `--template-file` for notifications. Included a bell at the beginning, which `tmux` makes visual. You'll notice it's trimmed down to remove anything except stuff relevant to mentions. I don't care being notified about reblogs or favorites (but thank you for them!), so none of that is there. Emojis for `sensitive: true` and `visibility: direct`, no names, no attachment links. Leads with status id (reply to id as relevant), account and id, link to status, then spoiler (if available) followed by message. 
 
-Further questions and comments may be addressed as follows: `toot @wxl@soc.ialis.me` 
+Further questions and comments may be addressed to [@wxl@soc.ialis.me][3] 
 
 [1]: https://github.com/McKael/madonctl
 [2]: https://github.com/tmux/tmux
+[3]: https://soc.ialis.me/@wxl
