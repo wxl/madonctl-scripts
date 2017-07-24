@@ -14,7 +14,9 @@ Here's what you'll find:
 
 Also, I'm working on a set of templates tweaked to my liking. I usually `madonctl stream` in one [`tmux`][2] pane, `madonctl stream local` in another, and then `madonctl stream --notifications-only --notification-types=mentions` in a 3rd. Using a fair amount of real estate, I like to keep things simple. That said, here's what we've got so far:
 
- * mynotifications.tmpl to use with `--template-file` for notifications. Included a bell at the beginning, which `tmux` makes visual. You'll notice it's trimmed down to remove anything except stuff relevant to mentions. I don't care being notified about reblogs or favorites (but thank you for them!), so none of that is there. Emojis for `sensitive: true` and `visibility: direct`, no names, no attachment links. Leads with status id (reply to id as relevant), account and id, link to status, then spoiler (if available) followed by message. 
+ * mynotifications.tmpl to use with `--template-file` for notifications. Included a bell at the beginning, which `tmux` makes visual. You'll notice it's trimmed down to remove anything except stuff relevant to mentions. I don't care being notified about reblogs or favorites (but thank you for them!), so none of that is there. Emojis for `sensitive: true` and `visibility: direct`, no names, no attachment links. Leads with status id (reply to id as relevant), account and id, link to status, then spoiler (if available) followed by message.
+
+![pic of mynotifications.tmpl in action](https://raw.githubusercontent.com/wxl/madonctl-scripts/master/assets/mynotifications.png "direct, sensitive toot with content warning")
 
 Further questions and comments may be addressed to [@wxl@soc.ialis.me][3] 
 
