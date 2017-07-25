@@ -24,7 +24,8 @@ Scripts
 Templates
 =========
 
- * **mynotifications.tmpl** to use with `--template-file` for notifications. Features:
+ * **mynotifications.tmpl** to use with `--template-file` for notifications.
+   ![pic of mynotifications.tmpl in action](https://raw.githubusercontent.com/wxl/madonctl-scripts/master/assets/mynotifications.png "direct, sensitive toot with content warning")
    * Bell at the beginning, which `tmux` makes visual.
    * Trimmed down to remove anything except stuff relevant to mentions. I don't care being notified about reblogs or favorites (but thank you for them!), so none of that is there.
    * Emojis for `sensitive: true` and `visibility: direct`
@@ -32,7 +33,6 @@ Templates
    * As little as 2 lines (default can be up to 10 times that):
      1. status-id (reply-to-id as relevant), account and id, link to status
      2. spoiler (if available) followed by message.
-  ![pic of mynotifications.tmpl in action](https://raw.githubusercontent.com/wxl/madonctl-scripts/master/assets/mynotifications.png "direct, sensitive toot with content warning")
 
 Support
 =======
