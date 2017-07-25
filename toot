@@ -4,7 +4,15 @@ if [ ! -z $1 ]; then
    if [ "$1" = "dm" ]; then
       madonctl toot --visibility=direct --stdin
    else
-      madonctl toot --in-reply-to=$1 --add-mentions --same-visibility --stdin
+      regex='^[0-9]+$'
+
+      if [[ $1 =~ $regex ]]; then
+         status=$1
+      else
+         status="$(madonctl search "$1" --template '{{with index .statuses 0}}{{printf "%.0f" .id}}{{end}}')"
+      fi
+
+      madonctl toot --in-reply-to=$status --add-mentions --same-visibility --stdin
    fi
 else
    madonctl toot --stdin
