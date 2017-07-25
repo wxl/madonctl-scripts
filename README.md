@@ -10,16 +10,16 @@ Also, I'm working on a set of templates tweaked to my liking. I usually `madonct
 Scripts
 =======
 
- * `toot [dm|status-id|URL]` has 3 forms, all of which take input from stdin:
-   1. `toot dm` creates a direct message. don't forget to include the mention.
-   1. `toot status-id|URL` will reply with appropriate visibility and mentions.
+ * `toot`*`[dm|status-id|URL]`* has 3 forms, all of which take input from stdin:
+   1. `toot`*`dm`* creates a direct message. don't forget to include the mention.
+   1. `toot`*`status-id|URL`* will reply with appropriate visibility and mentions.
    1. `toot` will create a new toot.
- * `untoot status-id` deletes toots.
+ * `untoot`*`status-id|URL`* deletes toots.
  * `mytoots` shows recent mentions.
  * `follows` deals with follow requests. For each, you can accept/deny and assuming the former, follow back if you like.
- * `follow status-id|user-id` follows a user.
- * `boost status-id|URL` just boosts. 
- * `favboost status-id|URL` boosts and favorites. I pretty much never just favorite something, so that's not included.
+ * `follow`*`status-id|user-id`* follows a user.
+ * `boost`*`status-id|URL`* just boosts. 
+ * `favboost`*`status-id|URL`* boosts and favorites. I pretty much never just favorite something, so that's not included.
 
 Templates
 =========

@@ -5,4 +5,12 @@ if [[ -z $1 ]]; then
    exit 1
 fi
 
-madonctl statuses --status-id $1 delete
+regex='^[0-9]+$'
+
+if [[ $1 =~ $regex ]]; then
+   status=$1
+else
+   status="$(madonctl search "$1" --template '{{with index .statuses 0}}{{printf "%.0f" .id}}{{end}}')"
+fi
+
+madonctl statuses --status-id $status delete
