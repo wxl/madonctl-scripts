@@ -43,7 +43,8 @@ Further questions and comments may be addressed to [@wxl@soc.ialis.me][3]
 Shout outs
 ==========
 
-A special thank you to [@redwolf@masto.io][5] for the lovely example toot to show off my notifications template. It does seem to suggest that he (and/or me) is a perv, but in fact, it was a lovely picture of [mating iguanas][6]. Of course, he still *might* be a perv, but…
+ * Super big thank yous to [@McKael@mamot.fr][7] for not only creating `[madonctl][1]` but for being so darn responsive to my many questions and suggestions. Someone give this guy a raise!
+ * A special thank you to [@redwolf@masto.io][5] for the lovely example toot to show off my notifications template. It does seem to suggest that he (and/or me) is a perv, but in fact, it was a lovely picture of [mating iguanas][6]. Of course, he still *might* be a perv, but…
 
 [1]: https://github.com/McKael/madonctl
 [2]: https://github.com/tmux/tmux
@@ -51,3 +52,4 @@ A special thank you to [@redwolf@masto.io][5] for the lovely example toot to sho
 [4]: https://github.com/tootsuite/mastodon
 [5]: https://masto.io/@redwolf
 [6]: https://pictor.ialis.me/media_attachments/files/000/218/734/original/79069ce1b3ea6da5.jpg
+[7]: https://mamot.fr/@McKael
