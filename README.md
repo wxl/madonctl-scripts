@@ -24,9 +24,9 @@ Scripts
 Installation
 ------------
 
-Make sure that `$HOME/bin` is in your $PATH and fill it up with symlinks:
+Make sure that `$HOME/bin` is in your `$PATH` and fill it up with symlinks:
 
-```sh
+```
 find /path/to/madonctl-scripts/src/scripts -type f -exec ln -s {} ~/bin \;
 ```
 
