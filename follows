@@ -5,9 +5,9 @@ if [ -z "$(madonctl accounts follow-requests --list)" ]; then
    exit 0
 fi
 
-request="$(madonctl accounts follow-requests --list -l1 --color off)"
-id="$(echo "${request}" | grep "Account ID" | awk '{print $4}')"
-user="$(echo "${request}" | grep "UID" | awk '{print $2}')"
+request="$(madonctl accounts follow-requests --list -l1 '{{printf "%.0f" .id}}{{print .acct}}')"
+id="$(awk '{print $1}' <<< $request)"
+user="$(awk '{print $2}' <<< $request)"
 
 madonctl accounts follow-requests --account-id $id --list
 
