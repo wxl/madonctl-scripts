@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -z $1 ]; then
-   echo "Usage: $(basename) status-id|URL"
+   echo "Usage: $(basename $0) status-id|URL"
    exit 1
 fi
 
