@@ -1,6 +1,17 @@
 #!/usr/bin/env bash
 
-status=$1
+if [ -z $1 ]; then
+   echo "Usage: $(basename) status-id|URL"
+   exit 1
+fi
+
+regex='^[0-9]+$'
+
+if [[ $1 =~ $regex ]]; then
+   status=$1
+else
+   status="$(madonctl search "$1" --template '{{with index .statuses 0}}{{printf "%.0f" .id}}{{end}}')"
+fi
 
 madonctl status --status-id=$status favourite
 madonctl status --status-id=$status boost

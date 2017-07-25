@@ -15,8 +15,8 @@ Scripts
  * `mytoots` will show recent mentions.
  * `follows` looks for follow requests and allows the option of accepting as well as following back.
  * `follow` will take a user-id or account-id and follow that user.
- * `favboost` takes status id and both favorites and boosts it.
- * `boost` takes status id and boosts it. I pretty much never just favorite something, so that's not included.
+ * `favboost` takes status id or URL and both favorites and boosts it.
+ * `boost` takes status id or URL and boosts it. I pretty much never just favorite something, so that's not included.
 
 Templates
 =========
