@@ -32,7 +32,7 @@ Templates
    * As little as 2 lines (default can be up to 10 times that):
      1. status-id (reply-to-id as relevant), account and id, link to status
      2. spoiler (if available) followed by message.
-   ![pic of mynotifications.tmpl in action](https://raw.githubusercontent.com/wxl/madonctl-scripts/master/assets/mynotifications.png "direct, sensitive toot with content warning")
+  ![pic of mynotifications.tmpl in action](https://raw.githubusercontent.com/wxl/madonctl-scripts/master/assets/mynotifications.png "direct, sensitive toot with content warning")
 
 Support
 =======
