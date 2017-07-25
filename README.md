@@ -10,7 +10,7 @@ Also, I'm working on a set of templates tweaked to my liking. I usually `madonct
 Scripts
 =======
 
- * `toot` will either take toot, create a direct message with the `dm` argument, or reply to a toot using appropriate visibility and including appropriate mentions by using the status id. All input from stdin, please.
+ * `toot` will either toot, create a direct message with the `dm` argument, or reply to a toot using appropriate visibility and including appropriate mentions by using the status id or URL. All input from stdin, please.
  * `untoot` will take a status-id and delete it.
  * `mytoots` will show recent mentions.
  * `follows` looks for follow requests and allows the option of accepting as well as following back.
