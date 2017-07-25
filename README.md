@@ -18,8 +18,8 @@ Scripts
  * **`mytoots`** shows recent mentions.
  * **`follows`** deals with follow requests. For each, you can accept/deny and assuming the former, follow back if you like.
  * **`follow`*****`status-id|user-id`*** follows a user.
- * **`boost`******`status-id|URL`*** just boosts. 
- * **`favboost`******`status-id|URL`*** boosts and favorites. I pretty much never just favorite something, so that's not included.
+ * **`boost`*****`status-id|URL`*** just boosts. 
+ * **`favboost`*****`status-id|URL`*** boosts and favorites. I pretty much never just favorite something, so that's not included.
 
 Templates
 =========
