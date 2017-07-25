@@ -21,6 +21,15 @@ Scripts
  * **`boost`*****`status-id | URL`*** just boosts. 
  * **`favboost`*****`status-id | URL`*** boosts and favorites. I pretty much never just favorite something, so that's not included.
 
+Installation
+------------
+
+Make sure that `$HOME/bin` is in your $PATH and fill it up with symlinks:
+
+```sh
+find /path/to/madonctl-scripts/src/scripts -type f -exec ln -s {} ~/bin \;
+```
+
 Templates
 =========
 
