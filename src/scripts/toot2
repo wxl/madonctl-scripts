@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# check for attachments
+if [ "$1" = "file" ] || [ "$2" = "file" ]; then
+   attachment="--file <(wget -q -O - \$2)"
+fi
+
+# it's a dm!
+if [ "$1" = "dm" ]; then
+   madonctl toot --visibility=direct $attachment --stdin
+  exit 0
+# it's a reply!
+elif [[ $1 =~ ^[0-9]+$ || $1 == http* ]]; then
+   case $1 in
+      [0-9]*)
+         status=$1
+         ;;
+      http*)
+         status="$(madonctl search "$1" --template '{{with index .statuses 0}}{{printf "%.0f" .id}}{{end}}')"
+         ;;
+   esac
+   madonctl toot --in-reply-to=$status --add-mentions --same-visibility $attachment --stdin
+   exit 0
+# it must be a toot if nothing else
+else
+   madonctl toot $attachment --stdin
+   exit 0
+fi
