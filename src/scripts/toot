@@ -1,19 +1,35 @@
 #!/usr/bin/env bash
 
-if [ ! -z $1 ]; then
-   if [ "$1" = "dm" ]; then
-      madonctl toot --visibility=direct --stdin
+# it's a dm!
+if [ "$1" = "dm" ]; then
+   if [ "$2" = "file" ]; then
+      madonctl toot --visibility=direct --file <(wget -q -O - $3) --stdin
    else
-      regex='^[0-9]+$'
-
-      if [[ $1 =~ $regex ]]; then
+      madonctl toot --visibility=direct --stdin
+   fi
+   exit 0
+# it's a reply!
+elif [[ $1 =~ ^[0-9]+$ || $1 == http* ]]; then
+   case $1 in
+      [0-9]*)
          status=$1
-      else
+         ;;
+      http*)
          status="$(madonctl search "$1" --template '{{with index .statuses 0}}{{printf "%.0f" .id}}{{end}}')"
-      fi
-
+         ;;
+   esac
+   if [ "$2" = "file" ]; then
+      madonctl toot --in-reply-to=$status --add-mentions --same-visibility --file <(wget -q -O - $3) --stdin
+   else
       madonctl toot --in-reply-to=$status --add-mentions --same-visibility --stdin
    fi
+   exit 0
+# it must be a toot if nothing else
 else
-   madonctl toot --stdin
+   if [ "$1" = "file" ]; then
+      madonctl toot --file <(wget -q -O - $2) --stdin
+   else
+      madonctl toot --stdin
+   fi
+   exit 0
 fi
