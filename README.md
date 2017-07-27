@@ -5,7 +5,7 @@ This repo consists of `bash` scripts (et cetera) for use with [`madonctl`][1], t
 
 Don't expect heavily polished stuff here. I generally make things as I go. `madonctl` is meant to be easily scriptable, which lends itself well to quick solutions.
 
-Also, I'm working on a set of templates tweaked to my liking. I usually `madonctl stream` in one [`tmux`][2] pane, `madonctl stream local` in another, and then `madonctl stream --notifications-only --notification-types=mentions` in a 3rd. Using a fair amount of real estate, I like to keep things simple.
+Also, I'm working on a set of templates tweaked to my liking. I usually have an active [`tmux`][2] window of 5 panes, 4 of which are dedicated to `madonctl`. Using a fair amount of real estate, I like to keep things simple.
 
 Scripts
 =======
@@ -20,6 +20,11 @@ Scripts
  * **`follow`*****`status-id | user-id`*** follows a user.
  * **`boost`*****`status-id | URL`*** just boosts. 
  * **`favboost`*****`status-id | URL`*** boosts and favorites. I pretty much never just favorite something, so that's not included.
+ * **`tootmux`** adds my preferred set up to the current tmux window, occupying 60% of the total space:
+   1. home stream (30%)
+   1. local stream (30% - 10 lines)
+   1. mentions-only notifications stream (6 lines)
+   1. area for entering commands (2 lines)
 
 Installation
 ------------
