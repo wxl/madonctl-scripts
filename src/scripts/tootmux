@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-tmux splitw -t {bottom} -p 60 "madonctl stream" && \
-tmux splitw -t {bottom} -p 50 "madonctl stream local" && \
-tmux splitw -t {bottom} -l 9 "madonctl stream --notifications-only --notification-types=mentions --template-file=$HOME/dev/github/madonctl-scripts/src/templates/mynotifications.tmpl"
-tmux splitw -t {bottom} -l 1
+tmux splitw -t bottom -p 60 "madonctl stream" && \
+tmux splitw -t bottom -p 50 "madonctl stream local" && \
+tmux splitw -t bottom -l 9 "madonctl stream --notifications-only --notification-types=mentions --template-file=$HOME/git/madonctl-scripts/src/templates/mynotifications.tmpl"
+tmux splitw -t bottom -l 1
