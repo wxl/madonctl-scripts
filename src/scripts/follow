@@ -9,6 +9,8 @@ regex='^[0-9]+$'
 
 if [[ $1 =~ $regex ]]; then
    madonctl accounts --account-id $1 follow
+elif [[ $1 == http* ]]; then
+   madonctl accounts --account-id $(madonctl search $1 --template '{{with index .accounts 0}}{{.id}}{{end}}') follow
 else
    madonctl accounts --user-id $1 follow
 fi
