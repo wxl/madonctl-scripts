@@ -20,6 +20,7 @@ Scripts
  * **`follow`*****`status-id | user-id`*** follows a user.
  * **`boost`*****`status-id | URL`*** just boosts. 
  * **`favboost`*****`status-id | URL`*** boosts and favorites. I pretty much never just favorite something, so that's not included.
+ * **`show`*****`status-id`*** opens a toot in the browser.
  * **`tootmux`** adds my preferred set up to the current tmux window, occupying 60% of the total space:
    1. home stream (30%)
    1. local stream (30% - 10 lines)

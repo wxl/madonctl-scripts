@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+x-www-browser $(madonctl status --status-id $1 show --template '{{if .text_url}}{{.text_url}}{{else if .url}}{{.url}}{{else if .remote_url}}{{.remote_url}}{{end}}')
