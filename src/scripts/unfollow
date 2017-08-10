@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+if [[ -z $1 ]]; then
+   echo "Usage: $(basename $0) account-id|user-id|URL"
+   exit 1
+fi
+
+regex='^[0-9]+$'
+
+if [[ $1 =~ $regex ]]; then
+   madonctl accounts --account-id $1 follow --unset
+elif [[ $1 == http* ]]; then
+   madonctl accounts --account-id $(madonctl search $1 --template '{{with index .accounts 0}}{{.id}}{{end}}') follow --unset
+else
+   madonctl accounts --user-id $1 follow --unset
+fi

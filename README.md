@@ -17,7 +17,8 @@ Scripts
  * **`untoot`*****`status-id | URL`*** deletes toots.
  * **`mytoots`** shows recent mentions.
  * **`follows`** deals with follow requests. For each, you can accept/deny and assuming the former, follow back if you like.
- * **`follow`*****`status-id | user-id`*** toggles whether or not you are following a user.
+ * **`follow`*****`status-id | user-id | URL`*** follows a user.
+ * **`unfollow`*****`status-id | user-id | URL`*** unfollows a user.
  * **`boost`*****`status-id | URL`*** just boosts. 
  * **`favboost`*****`status-id | URL`*** boosts and favorites. I pretty much never just favorite something, so that's not included.
  * **`show`*****`status-id`*** opens a toot in the browser.
