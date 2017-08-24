@@ -19,8 +19,9 @@ Scripts
  * **`follows`** deals with follow requests. For each, you can accept/deny and assuming the former, follow back if you like.
  * **`follow`*****`status-id | user-id | URL`*** follows a user.
  * **`unfollow`*****`status-id | user-id | URL`*** unfollows a user.
+ * **`fav`*****`status-id | URL`*** just favorites.
  * **`boost`*****`status-id | URL`*** just boosts. 
- * **`favboost`*****`status-id | URL`*** boosts and favorites. I pretty much never just favorite something, so that's not included.
+ * **`favboost`*****`status-id | URL`*** boosts and favorites.
  * **`show`*****`status-id`*** opens a toot in the browser.
  * **`tootmux`** adds my preferred set up to the current tmux window, occupying 60% of the total space:
    1. home stream (30%)
