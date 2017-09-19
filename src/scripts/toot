@@ -3,7 +3,11 @@
 # it's a dm!
 if [ "$1" = "dm" ]; then
    if [ "$2" = "file" ]; then
-      madonctl toot --visibility=direct --file <(wget -q -O - $3) --stdin
+      if [[ $3 =~ ^http ]]; then
+         madonctl toot --visibility=direct --file <(wget -q -O - $3) --stdin
+      else
+         madonctl toot --visibility=direct --file "${3}" --stdin
+      fi
    else
       madonctl toot --visibility=direct --stdin
    fi
@@ -19,7 +23,11 @@ elif [[ $1 =~ ^[0-9]+$ || $1 == http* ]]; then
          ;;
    esac
    if [ "$2" = "file" ]; then
-      madonctl toot --in-reply-to=$status --add-mentions --same-visibility --file <(wget -q -O - $3) --stdin
+      if [[ $3 =~ ^http ]]; then
+         madonctl toot --in-reply-to=$status --add-mentions --same-visibility --file <(wget -q -O - $3) --stdin
+      else
+         madonctl toot --in-reply-to=$status --add-mentions --same-visibility --file "${3}" --stdin
+      fi
    else
       madonctl toot --in-reply-to=$status --add-mentions --same-visibility --stdin
    fi
@@ -27,7 +35,11 @@ elif [[ $1 =~ ^[0-9]+$ || $1 == http* ]]; then
 # it must be a toot if nothing else
 else
    if [ "$1" = "file" ]; then
-      madonctl toot --file <(wget -q -O - $2) --stdin
+      if [[ $2 =~ ^http ]]; then
+         madonctl toot --file <(wget -q -O - $2) --stdin
+      else
+         madonctl toot --file "${2}" --stdin
+      fi
    else
       madonctl toot --stdin
    fi

@@ -11,9 +11,9 @@ Scripts
 =======
 
  * **`toot`** has 3 forms, all of which take input from stdin and can optionally add a single attachment:
-   1. **`toot dm [file`*****`URL`*****`]`** creates a direct message. don't forget to include the mention.
-   1. **`toot`*****`status-id | URL`*****`[ file`*****`URL`*****`]`** will reply with appropriate visibility and mentions.
-   1. **`toot [ file`*****`URL`*****`]`** will create a new toot.
+   1. **`toot dm [file`*****`URL | path`*****`]`** creates a direct message. don't forget to include the mention.
+   1. **`toot`*****`status-id | URL`*****`[ file`*****`URL | path`*****`]`** will reply with appropriate visibility and mentions.
+   1. **`toot [ file`*****`URL | path`*****`]`** will create a new toot.
  * **`untoot`*****`status-id | URL`*** deletes toots.
  * **`mytoots`** shows recent mentions.
  * **`follows`** deals with follow requests. For each, you can accept/deny and assuming the former, follow back if you like.
