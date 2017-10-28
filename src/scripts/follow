@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [[ -z $1 ]]; then
-   echo "Usage: $(basename $0) account-id|user-id"
+   echo "Usage: $(basename $0) account-id|user-id|URL"
    exit 1
 fi
 
