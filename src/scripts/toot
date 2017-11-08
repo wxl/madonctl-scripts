@@ -19,7 +19,7 @@ elif [[ $1 =~ ^[0-9]+$ || $1 == http* ]]; then
          status=$1
          ;;
       http*)
-         status="$(madonctl search "$1" --template '{{with index .statuses 0}}{{printf "%.0f" .id}}{{end}}')"
+         status="$(madonctl search "$1" --template '{{with index .statuses 0}}{{.id}}{{end}}')"
          ;;
    esac
    if [ "$2" = "file" ]; then

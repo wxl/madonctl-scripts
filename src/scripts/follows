@@ -5,7 +5,7 @@ if [ -z "$(madonctl accounts follow-requests --list)" ]; then
    exit 0
 fi
 
-request="$(madonctl accounts follow-requests --list -l1 --template '{{printf "%.0f" .id}} {{print .acct}}')"
+request="$(madonctl accounts follow-requests --list -l1 --template '{{.id}} {{print .acct}}')"
 id="$(awk '{print $1}' <<< $request)"
 user="$(awk '{print $2}' <<< $request)"
 

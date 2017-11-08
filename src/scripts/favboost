@@ -10,7 +10,7 @@ regex='^[0-9]+$'
 if [[ $1 =~ $regex ]]; then
    status=$1
 else
-   status="$(madonctl search "$1" --template '{{with index .statuses 0}}{{printf "%.0f" .id}}{{end}}')"
+   status="$(madonctl search "$1" --template '{{with index .statuses 0}}{{.id}}{{end}}')"
 fi
 
 madonctl status --status-id=$status favourite

@@ -29,15 +29,6 @@ Scripts
    1. mentions-only notifications stream (6 lines)
    1. area for entering commands (2 lines)
 
-Installation
-------------
-
-Make sure that `$HOME/bin` is in your `$PATH` and fill it up with symlinks:
-
-```
-find /path/to/madonctl-scripts/src/scripts -type f -exec ln -s {} ~/bin \;
-```
-
 Templates
 =========
 
@@ -51,6 +42,22 @@ Templates
    * As little as 2 lines (default can be up to 10 times that):
      1. status-id (reply-to-id as relevant), account and id, link to status
      2. spoiler (if available) followed by message.
+
+Installation
+============
+
+Make sure that `$HOME/bin` is in your `$PATH` and fill it up with symlinks:
+
+```
+find /path/to/madonctl-scripts/src/scripts -type f -exec ln -s {} ~/bin \;
+```
+
+Compatibility
+=============
+
+tl;dr Everything should Just Work™ with Mastodon instances running v2.0.0, which `madonctl` should be updated for at this point as well.
+
+As of [v2.0.0][10], `id` attributes are not returned as strings instead of integers. Whenever templating is employed, this is now represented as `{{.id}}` whereas previously it was `{{printf "%.0f" .id}}`. Naturally, if any conditionals are used, the logic will need to be a little different. 
 
 Support
 =======
@@ -73,3 +80,4 @@ Shout outs
 [7]: https://mamot.fr/@McKael
 [8]: https://mcabber.com/
 [9]: https://anticapitalist.party/@ghost
+[10]: https://github.com/tootsuite/mastodon/releases/tag/v2.0.0
